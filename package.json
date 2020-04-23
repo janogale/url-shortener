@@ -1,10 +1,11 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "url-shortener",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "URL Shortener",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Janagale",
   "dependencies": {
+    "axios": "^0.19.2",
     "gatsby": "^2.20.25",
     "gatsby-image": "^2.3.4",
     "gatsby-plugin-manifest": "^2.3.5",
@@ -13,6 +14,8 @@
     "gatsby-plugin-sharp": "^2.5.6",
     "gatsby-source-filesystem": "^2.2.4",
     "gatsby-transformer-sharp": "^2.4.6",
+    "mongoose": "^5.9.10",
+    "netlify-lambda": "^1.6.3",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
@@ -22,7 +25,7 @@
     "prettier": "2.0.4"
   },
   "keywords": [
-    "gatsby"
+    "url shortener"
   ],
   "license": "MIT",
   "scripts": {
@@ -32,13 +35,11 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "start:lambda": "netlify-lambda serve backend/lambda",
+    "build:lambda": "netlify-lambda build backend/lambda"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/janogale/url-shortener"
   }
 }
